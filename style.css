@@ -1,0 +1,119 @@
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --dk-cyan: hsl(184, 100%, 22%);
+    --very-dk-cyan: hsl(179, 100%, 13%);
+    --transp-white:  hsla(0, 0%, 100%, 0.75);
+    --light-grey: hsl(0, 0%, 95%);
+}
+
+body{
+    background-color: var(--light-grey);
+    font-size: 15px;
+    margin: 0;
+    width: 100vw;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orange{
+    background-color: var(--orange);
+}
+
+.orange .learn-more-btn{
+    color: var(--orange)
+}
+
+.dk-cyan{
+    background-color: var(--dk-cyan);
+}
+
+.dk-cyan .learn-more-btn{
+    color: var(--dk-cyan);
+}
+
+.very-dk-cyan{
+    background-color: var(--very-dk-cyan);
+}
+
+.very-dk-cyan .learn-more-btn {
+    color: var(--very-dk-cyan);
+}
+
+p{
+    color: var(--transp-white);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.card{
+    padding: 48px 46px;
+    min-height: 400px;
+    max-width: 300px; 
+    position: relative;
+}
+
+.card:first-child{
+    border-radius: 15px 15px 0 0;
+}
+
+.card:last-child{
+    border-radius: 0 0 15px 15px;
+}
+
+.card-title{
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--light-grey);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.learn-more-btn{
+    height: 48px;
+    width: 150px; 
+    border: 2px solid var(--light-grey);
+    border-radius: 28px;
+    font-family: 'Lexend Deca', sans-serif;
+    align-self: stretch;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    bottom: 48px;
+    left: 46px;
+}
+
+.learn-more-btn:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--light-grey);
+}
+
+@media screen and (min-width: 1207px) {
+    .cards{
+        flex-direction: row;
+    }
+
+    .card{
+        min-height: 500px;
+    }
+
+    .card:first-child{
+        border-radius: 15px 0 0 15px;
+    }
+    
+    .card:last-child{
+        border-radius: 0 15px 15px 0;
+    }
+}
